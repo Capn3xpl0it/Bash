@@ -104,4 +104,30 @@ El comando `sed` tiene opciones para cambiar su funcionamiento:
 ---
 # Eliminar secciones de líneas (`cut`)
 
-El comando `cut` se utiliza para eliminar secciones de cada línea de un archivo. Es una herramienta útil para extraer campos específicos 
+El comando `cut` se utiliza para eliminar secciones de cada línea de un archivo. Es una herramienta útil para extraer campos específicos de datos de un archivo o flujo de salida.
+
+##### Archivo _datos.txt_
+```CSV
+Kai 	Refsnes	30,Norway
+Robin	Smith	25,Denmark
+Sienna	Davis	40,Germany
+```
+
+## Uso básico
+
+Para extraer el primer campo de un archivo, use `cut -f1 archivo`
+```bash
+    ┌──(kali㉿Kali)-[~]
+    └─$ cut -f1 datos.txt
+```
+Por defecto, `cut` usa una tabulación como delimitador.
+
+### Opciones
+
+El comando `cut` tiene opciones para cambiar su funcionamiento:
+
+| Opción             | Función                                            |
+| ------------------ | -------------------------------------------------- |
+| `cut -d`           | Elegir el delimitador de los campos                |
+| `cut -f`           | Seleccionar campos específicos a mostrar           |
+| `cut --complement` | Mostrar todos los campos excepto los seleccionados |
