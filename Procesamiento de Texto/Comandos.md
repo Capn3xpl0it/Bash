@@ -102,7 +102,7 @@ El comando `sed` tiene opciones para cambiar su funcionamiento:
 | `sed -l` | Especificar la longitud de la línea para el comando `l`               |
 
 ---
-# Eliminar secciones de líneas (`cut`)
+# 4. Eliminar secciones de líneas (`cut`)
 
 El comando `cut` se utiliza para eliminar secciones de cada línea de un archivo. Es una herramienta útil para extraer campos específicos de datos de un archivo o flujo de salida.
 
@@ -133,7 +133,7 @@ El comando `cut` tiene opciones para cambiar su funcionamiento:
 | `cut --complement` | Mostrar todos los campos excepto los seleccionados |
 
 --- 
-# Ordenar líneas de texto de un archivo (`sort`)
+# 5. Ordenar líneas de texto de un archivo (`sort`)
 
 El comando `sort` se utiliza para ordenar líneas de archivos de texto. Es una herramienta útil para organizar datos en archivos.
 
@@ -162,3 +162,23 @@ El comando `sort` tiene opciones para cambiar su funcionamiento:
 | `sort -u` | Eliminar líneas duplicadas          |
 | `sort -t` | Especificar el delimitador de campo |
 
+---
+# 6. Mostrar la última parte de un archivo (`tail`)
+
+El comando `tail` se utiliza para mostrar la última parte de los archivos. Es especialmente útil para ver el final de archivos de registro o cualquier archivo que se esté actualizando en tiempo real.
+
+## Sintaxis
+
+La sintaxis básica del comando `tail` es `tail <opción> <archivo>`
+
+### Opciones
+
+El comando `tail` tiene varias opciones para personalizar su comportamiento:
+
+| Opción             | Función                                                                         |
+| ------------------ | ------------------------------------------------------------------------------- |
+| `tail -n <número>` | Muestra las últimas líneas \<numeradas> del archivo                             |
+| `tail -f`          | Sigue el archivo a medida que crece, útil para monitorizar archivos de registro |
+| `tail -c <número>` | Muestra los últimos <número> bytes del archivo                                  |
+| `tail --pid=<pid>` | Terminar después de que finaliza el proceso con el PID proporcionado            |
+| `tail --retry`     | Sigue intentando abrir un archivo aunque sea inaccesible                        |
