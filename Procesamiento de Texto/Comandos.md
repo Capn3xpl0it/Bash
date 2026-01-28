@@ -182,3 +182,35 @@ El comando `tail` tiene varias opciones para personalizar su comportamiento:
 | `tail -c <número>` | Muestra los últimos <número> bytes del archivo                                  |
 | `tail --pid=<pid>` | Terminar después de que finaliza el proceso con el PID proporcionado            |
 | `tail --retry`     | Sigue intentando abrir un archivo aunque sea inaccesible                        |
+
+---
+# 7. Mostrar el inicio de un archivo (`head`)
+
+El comando `head` se utiliza para mostrar la primera parte de los archivos. Es especialmente útil para previsualizar el inicio de un archivo y así entender su estructura.
+
+## Uso básico
+
+El comando `head` muestra por defecto las primeras 10 líneas de un archivo.
+```bash
+    ┌──(kali㉿Kali)-[~]
+    └─$ head log.txt
+    línea 01
+    línea 02
+    línea 03
+    línea 04
+    línea 05
+    línea 06
+    línea 07
+    línea 08
+    línea 09
+    línea 10
+```
+
+### Opciones
+
+El comando tiene dos opciones para personalizar su comportamiento:
+
+| Opción             | Función                                           |
+| ------------------ | ------------------------------------------------- |
+| `head -n <número>` | Muestra las primeras \<número> líneas del archivo |
+| `head -c <número>` | Muestra los primeros \<número> bytes del archivo  |
