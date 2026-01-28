@@ -10,6 +10,7 @@
 6. __[``]()__
 7. __[``]()__
 
+---
 # 1. Buscar texto mediante patrones (`grep`)
 
 El comando `grep` se utiliza para buscar patrones de texto dentro de archivos.
@@ -37,6 +38,7 @@ El comando `grep` tiene opciones para cambiar su funcionamiento:
 Las expresiones regulares permiten buscar patrones complejos.<br>
 Por ejemplo, `grep '^[A-Za-z] archivo.txt`  encuentra líneas que empiezan por una letra.
 
+---
 # 2. Escaneo y procesamiento de patrones del lenguaje (`awk`)
 
 El comando `awk` se utiliza para el escaneo y procesamiento de patrones del lenguaje. Es útil para manejar archivos de texto y se utiliza para la extracción de datos y la elaboración de informes.
@@ -71,3 +73,35 @@ El comando `awk` tiene opciones para cambiar su funcionamiento.
 | -------- | ---------------------------------------------- |
 | `awk -F` | Establecer el separador de los datos           |
 | `awk -v` | Establecer una variable para usar en el script |
+
+---
+# 3. Editor de flujo (`sed`)
+
+El comando `sed` es un editor de flujo usado para realizar transformaciones básicas de texto en un flujo de entrada. Es una herramienta poderosa para hacer ediciones rápidas en archivos o flujos de datos. 
+
+## Uso básico
+
+Para reemplazar la primera aparición de un patrón en un archivo, usa `sed 's/original/nuevo' archivo` 
+```bash
+    ┌──(kali㉿Kali)-[~]
+    └─$ sed 's/Mundo/Bash' hola.txt
+    ¡Hola, Bash!
+```
+
+### Opciones
+
+El comando `sed` tiene opciones para cambiar su funcionamiento:
+
+| Opción   | Función                                                               |
+| -------- | --------------------------------------------------------------------- |
+| `sed -i` | Editar archivos directamente sin necesidad de guardarlos por separado |
+| `sed -e` | Añadir el script a los comandos a ejecutar                            |
+| `sed -n` | No imprime líneas automáticamente                                     |
+| `sed -r` | Utilizar expresiones regulares extendidas                             |
+| `sed -f` | Añadir un script a partir de un archivo                               |
+| `sed -l` | Especificar la longitud de la línea para el comando `l`               |
+
+---
+# Eliminar secciones de líneas (`cut`)
+
+El comando `cut` se utiliza para eliminar secciones de cada línea de un archivo. Es una herramienta útil para extraer campos específicos 
