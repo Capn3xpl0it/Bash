@@ -131,3 +131,34 @@ El comando `cut` tiene opciones para cambiar su funcionamiento:
 | `cut -d`           | Elegir el delimitador de los campos                |
 | `cut -f`           | Seleccionar campos específicos a mostrar           |
 | `cut --complement` | Mostrar todos los campos excepto los seleccionados |
+
+--- 
+# Ordenar líneas de texto de un archivo (`sort`)
+
+El comando `sort` se utiliza para ordenar líneas de archivos de texto. Es una herramienta útil para organizar datos en archivos.
+
+## Uso básico
+
+Para ordenar un archivo, utiliza `sort archivo`
+```bash
+    ┌──(kali㉿Kali)-[~]
+    └─$ sort colores.txt
+    Amarillo
+    Café
+    Dorado
+    Fucsia
+    Rojo
+```
+
+### Opciones
+
+El comando `sort` tiene opciones para cambiar su funcionamiento:
+
+| Opción    | Función                             |
+| --------- | ----------------------------------- |
+| `sort -r` | Erden inverso                       |
+| `sort -n` | Orden numérico                      |
+| `sort -k` | Ordenar una columna específica      |
+| `sort -u` | Eliminar líneas duplicadas          |
+| `sort -t` | Especificar el delimitador de campo |
+
